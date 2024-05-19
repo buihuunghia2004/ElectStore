@@ -25,11 +25,12 @@ const LoginAndRegister = () => {
   const login = async () => {
     setEmail({ ...email, isErr: false })
     setPassword({ ...password, isErr: false })
-
     dispatch(loginThunk({email:email.text,password:password.text}))
     
     console.log(loadding);
   }
+
+  
 
   return (
     <View style={[GlobalStyle.viewContainer24, styles.container]}>
@@ -40,6 +41,7 @@ const LoginAndRegister = () => {
         <TouchableOpacity onPress={() => setStateForm(LOGIN_STATE)}>
           <Text style={stateForm == LOGIN_STATE && styles.txtIsState}>Log in</Text>
         </TouchableOpacity>
+
         <TouchableOpacity onPress={() => setStateForm(REGISTER_STATE)}>
           <Text style={stateForm == REGISTER_STATE && styles.txtIsState} >Create account</Text>
         </TouchableOpacity>

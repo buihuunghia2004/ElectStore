@@ -10,13 +10,14 @@ import FilterScreen from './src/screens/FilterScreen'
 import Home from './src/navigation/Home'
 import { Provider } from 'react-redux'
 import { store } from './src/app/store'
+import Cart from './src/features/cart/Cart'
 
 const App = () => {
   return (
     <Provider store={store}>
         <NavigationContainer>
         <View style={styles.container}>
-          <LoginAndRegister/>
+          <Cart/>
         </View>
       </NavigationContainer>
     </Provider>

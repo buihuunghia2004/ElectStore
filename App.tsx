@@ -11,13 +11,14 @@ import Home from './src/navigation/Home'
 import { Provider } from 'react-redux'
 import { store } from './src/app/store'
 import Cart from './src/features/cart/Cart'
+import Products from './src/features/products/Products'
 
 const App = () => {
   return (
     <Provider store={store}>
         <NavigationContainer>
         <View style={styles.container}>
-          <Cart/>
+          <Products/>
         </View>
       </NavigationContainer>
     </Provider>

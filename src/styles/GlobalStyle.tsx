@@ -4,6 +4,10 @@ export default StyleSheet.create({
   viewRow:{
     flexDirection:'row'
   },
+  viewRowFull:{
+    flexDirection:'row',
+    flex:1
+  },
   icon24:{
     width:24,
     height:24

@@ -6,7 +6,7 @@ import SearchHome from '../search/SearchHome'
 const HeaderSearch: React.FC = () => {
   const CartAndAccount = () => {
     return(
-      <View style={GlobalStyle.viewRow}>
+      <View style={[GlobalStyle.viewRow,{margin:20}]}>
         <TouchableOpacity style={styles.marginRight16}>
           <Image style={GlobalStyle.icon24} source={require('../../resources/icons/bag.png')}/>
         </TouchableOpacity>
@@ -34,6 +34,7 @@ export default HeaderSearch
 
 const styles = StyleSheet.create({
   container:{
+  
   },
   headerTop:{
     justifyContent:'space-between',

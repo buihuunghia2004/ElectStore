@@ -1,10 +1,13 @@
 import { StyleSheet, View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
 import React from 'react';
-import HeaderSearch from '../../components/header/HeaderSearch';
-import GlobalStyle from '../../styles/GlobalStyle';
+import Header from '../../components/header/Header';
+import GlobalStyle from '../../styles/globalStyle';
 import TypeProduct from './TypeProduct';
 import Item_Product1 from './Item_Product1';
 import Typeconfi from './Typeconfi';
+import globalStyle from '../../styles/globalStyle';
+import BreadCrumb from '../../components/BreadCrumb';
+import colors from '../../styles/colors';
 
 
 interface TypeProduct {
@@ -78,12 +81,8 @@ const Products = () => {
     }
     return (
         <View style={styles.container}>
-            <HeaderSearch />
-            <View style={[GlobalStyle.viewRow, { padding: 15 }]}>
-                <Text>Home</Text>
-                <Text>{'>'}</Text>
-                <Text style={{ color: 'blue', marginLeft: 5 }}>Products</Text>
-            </View>
+            <Header modifier={styles.pdH24}/>
+            <BreadCrumb data={["Home","Product","Laptop"]} modifier={styles.breadCrumb}/>
             <FlatList
                 horizontal
                 data={dataTypeProduct}
@@ -105,6 +104,7 @@ const Products = () => {
                     <Text>Sort by :</Text>
                 </TouchableOpacity>
             </View>
+            
             <FlatList
                data ={dataPrdList}
                 renderItem={renderPrdList}
@@ -119,9 +119,14 @@ export default Products;
 
 const styles = StyleSheet.create({
     container: {
-
         justifyContent: 'center',
-
+    },
+    pdH24:{
+      paddingHorizontal:24
+    },
+    breadCrumb:{
+      paddingHorizontal:24,
+      marginTop:16
     },
     spiner: {
         margin: 10,

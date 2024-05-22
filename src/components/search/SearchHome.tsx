@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import GlobalStyle from '../../styles/GlobalStyle'
+import GlobalStyle from '../../styles/globalStyle'
 
 const SearchHome = () => {
   return (
@@ -22,6 +22,5 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     alignItems:'center',
     paddingHorizontal:16,
-    marginHorizontal:12
   }
 })

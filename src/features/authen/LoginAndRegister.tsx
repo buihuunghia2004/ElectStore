@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import GlobalStyle from '../../styles/GlobalStyle'
+import GlobalStyle from '../../styles/globalStyle'
 import InputAuth from '../../components/editext/InputAuth'
 import CheckBox from '../../components/CheckBox'
 import Line from '../../components/line/Line'

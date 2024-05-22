@@ -1,8 +1,8 @@
 import { Button, FlatList, Image, StyleSheet, Text, View ,ScrollView} from 'react-native'
 import React from 'react'
-import GlobalStyle from '../styles/GlobalStyle'
+import GlobalStyle from '../styles/globalStyle'
 import HeaderHome from '../components/header/HeaderHome'
-import HeaderSearch from '../components/header/HeaderSearch'
+import HeaderSearch from '../components/header/Header'
 
 const ProductsScreen = () => {
   const devices = [

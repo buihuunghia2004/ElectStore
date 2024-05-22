@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import HeaderHome from './src/components/header/HeaderHome'
-import HeaderSearch from './src/components/header/HeaderSearch'
+import HeaderSearch from './src/components/header/Header'
 import Main from './src/Main'
 import { NavigationContainer } from '@react-navigation/native'
 import LoginAndRegister from './src/features/authen/LoginAndRegister'

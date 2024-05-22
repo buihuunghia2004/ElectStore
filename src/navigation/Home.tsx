@@ -1,7 +1,7 @@
 import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import HeaderHome from '../components/header/HeaderHome'
-import GlobalStyle from '../styles/GlobalStyle'
+import GlobalStyle from '../styles/globalStyle'
 import Line from '../components/line/Line'
 import ItemProduct from '../components/item/ItemProduct'
 

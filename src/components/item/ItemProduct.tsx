@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react' 
-import GlobalStyle from '../../styles/GlobalStyle'
+import GlobalStyle from '../../styles/globalStyle'
 
 interface ItemProductProps{
   data: {},

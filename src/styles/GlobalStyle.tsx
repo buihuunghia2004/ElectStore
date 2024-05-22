@@ -27,6 +27,11 @@ export default StyleSheet.create({
     justifyContent:'space-around'
   },
   container:{
-    flex:1
+    flex:1,
+    paddingHorizontal:24
+  },
+  line:{
+    height:1,
+    width:'100%'
   }
 })

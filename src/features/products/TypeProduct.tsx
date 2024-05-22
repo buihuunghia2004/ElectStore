@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet,Image } from 'react-native'
 import React from 'react'
-import GlobalStyle from '../../styles/GlobalStyle';
+import GlobalStyle from '../../styles/globalStyle';
 interface Props {
     imageUrl: any;
     name: string

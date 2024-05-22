@@ -1,6 +1,6 @@
 import { FlatList, Image, StyleSheet, Text, View,TouchableOpacity} from 'react-native'
 import React from 'react'
-import GlobalStyle from '../../styles/GlobalStyle'
+import GlobalStyle from '../../styles/globalStyle'
 import InputComponent from '../../components/InputComponent'
 import { green } from 'react-native-reanimated/lib/typescript/reanimated2/Colors'
 

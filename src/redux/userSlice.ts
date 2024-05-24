@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { authenAPI } from './authenAPI'
+import { authenAPI } from '../APIs/authenAPI'
 createAsyncThunk
 
 const IDLE = 1

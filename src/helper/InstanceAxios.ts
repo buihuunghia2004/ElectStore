@@ -1,7 +1,6 @@
 import axios from 'axios'
 import environment from '../config/environment';
 
-
 const InstanceAxios = axios.create({
   baseURL: environment.BASE_URL
 })
@@ -17,8 +16,8 @@ InstanceAxios.interceptors.request.use(
 )
 
 InstanceAxios.interceptors.response.use(
-  function (response) {
-    return response
+  function (response) {    
+    return response.data
   },
   function (error) {
     return error.response

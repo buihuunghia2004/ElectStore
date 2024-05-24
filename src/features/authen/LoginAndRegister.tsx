@@ -5,9 +5,9 @@ import InputAuth from '../../components/editext/InputAuth'
 import CheckBox from '../../components/CheckBox'
 import Line from '../../components/line/Line'
 import colors from '../../styles/colors'
-import { authenAPI } from './authenAPI'
+import { authenAPI } from '../../APIs/authenAPI'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginThunk } from './userSlice'
+import { loginThunk } from '../../redux/userSlice'
 import { AppDispatch, RootState } from '../../app/store'
 
 const LOGIN_STATE = 1

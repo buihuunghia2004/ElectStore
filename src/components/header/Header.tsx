@@ -32,7 +32,7 @@ export default Header
 
 const styles = StyleSheet.create({
   ctn: {
-    width: '100%',
+    flex:1,
     height: 92,
     justifyContent: 'space-between',
   },

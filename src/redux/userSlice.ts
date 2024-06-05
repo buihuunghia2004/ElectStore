@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { authenAPI } from '../APIs/authenAPI'
-createAsyncThunk
 
 const IDLE = 1
 const PENDING = 2
@@ -34,7 +33,6 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    
   },
   extraReducers: (builder) => {
     builder.addCase(loginThunk.fulfilled, (state,action) => {
@@ -48,4 +46,4 @@ const userSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const {  } = userSlice.actions
 
-export default userSlice.reducer
+export default userSlice.reducer 

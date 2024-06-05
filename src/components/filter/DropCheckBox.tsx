@@ -5,7 +5,7 @@ import CheckBox from '../CheckBox'
 interface DropCheckBoxProps{
   title:string,
   data: Array<string>,
-  itemCheck:number,
+  itemCheck:number[],
   onPressItem:(index: number) => void
 }
 const DropCheckBox: React.FC<DropCheckBoxProps> = ({title,data,itemCheck,onPressItem}) => {
@@ -24,7 +24,7 @@ const DropCheckBox: React.FC<DropCheckBoxProps> = ({title,data,itemCheck,onPress
               style={GlobalStyle.viewRow} 
               onPress={() => onPressItem(index)}
             >
-              <CheckBox isCheck={index == itemCheck} onPress={() => onPressItem(index)}/>
+              <CheckBox isCheck={itemCheck.includes(index)} onPress={() => onPressItem(index)}/>
               <Text>{item}</Text>
             </TouchableOpacity>
           )

@@ -1,9 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-
-const Line = () => {
+import colors from '../../styles/colors'
+interface Props{
+  backgroundColor:string,
+}
+const Line = (props:Props) => {
+  const {backgroundColor} = props
+  const style = {
+    ...styles.line,
+    backgroundColor:backgroundColor,
+  }
   return (
-    <View style={styles.line}>
+    <View style={style}>
     </View>
   )
 }
@@ -12,8 +20,6 @@ export default Line
 
 const styles = StyleSheet.create({
   line:{
-    backgroundColor:'black',
-    flex:1,
     height:1
   }
 })

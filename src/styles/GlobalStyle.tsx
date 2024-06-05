@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import colors from './colors'
 
 export default StyleSheet.create({
   viewRow:{
@@ -6,7 +7,7 @@ export default StyleSheet.create({
   },
   viewRowFull:{
     flexDirection:'row',
-    flex:1
+    flex:1,backgroundColor:'blue'
   },
   icon24:{
     width:24,
@@ -20,6 +21,9 @@ export default StyleSheet.create({
     flex:1,
     padding:24
   },
+  mgH24:{
+    marginHorizontal:24
+  },
   justBettwen:{
     justifyContent:'space-between'
   },
@@ -28,7 +32,7 @@ export default StyleSheet.create({
   },
   container:{
     flex:1,
-    paddingHorizontal:24
+    backgroundColor:colors.backGround
   },
   line:{
     height:1,

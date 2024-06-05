@@ -3,35 +3,43 @@ import React, { useState } from 'react'
 import GlobalStyle from '../styles/globalStyle'
 import DropCheckBox from '../components/filter/DropCheckBox'
 
-interface FilterChoosedProps{
-  content:string,
-  onPress: () => void
-}
-const FilterChoosed: React.FC<FilterChoosedProps> = ({content,onPress}) => {
-  return(
-    <TouchableOpacity style={{flexDirection:'row'}} onPress={onPress}>
-      <Text>{content}</Text>
-    </TouchableOpacity>
-  )
-}
-
 const FilterScreen = () => {
-  const [filter,setFilter] = useState(['Hp','Học tập - văn phòng'])
-  const [brandState,setBrandState] = useState(0)
+  const [brandState,setBrandState] = useState<number[]>([])
+
+  const setXXX = (i:number) => {
+    const j = brandState.find(item => item == i)
+    console.log(j);
+    
+    if (j == undefined) {
+      setBrandState([...brandState,i])
+    }else{
+      setBrandState(brandState.filter(item => item != i))
+    }
+    console.log(brandState);
+  }
   return (
     <View style={styles.container}>
-      <Button title='Đóng'/>
-      
-      <View style={styles.container}>
-        <Text style={styles.txtTitle}>Tiêu chí đã chọn:</Text>
+      <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <Text style={styles.txtTitle}>Filter</Text>
+        <Text>Clear all</Text>
       </View>
 
       <DropCheckBox 
         title='Brand' 
         itemCheck={brandState} 
         data={['Asus','Acer','Apple','Dell']} 
-        onPressItem={(index) => {setBrandState(index)}}
+        onPressItem={(index) =>{ setXXX(index)
+           console.log(index);
+        }}
       />
+      <DropCheckBox 
+        title='Brand' 
+        itemCheck={brandState} 
+        data={['Asus','Acer','Apple','Dell']} 
+        onPressItem={(index) => setXXX(index)}
+      />
+
+
 
       <View style={GlobalStyle.viewRow}>
         <Button title='Bỏ chọn'/>
@@ -46,7 +54,8 @@ export default FilterScreen
 
 const styles = StyleSheet.create({
   container:{
-    flex:1
+    flex:1,
+    padding:24
   },
   txtTitle:{
     color:'black',

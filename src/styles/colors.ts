@@ -12,10 +12,12 @@ const colors = {
   primary700: '#042352',
   primary900: '#021736',
   secondary: '#F45E0C',
-  background: '#ecf0f1',
+  secondary100: '#FDDBC9',
+  secondary200: '#FAB793',
   text: '#2c3e50',
   white: '#ffffff',
   black: '#000000',
+  backGround:'#FFF'
 };
 
 export default colors;

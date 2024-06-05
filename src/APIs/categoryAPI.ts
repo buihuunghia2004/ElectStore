@@ -3,7 +3,7 @@ import { ICategoryResponse } from "../types/ResponseTypes"
 
 const getCategory = async () => {
  const res = await InstanceAxios.get('category')
- return res
+ return res.data
 }
 
 export const categoryApi={
